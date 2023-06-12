@@ -1,4 +1,4 @@
-import { HeaderContainer } from "./styles";
+import { HeaderContainer, RightSide } from "./styles";
 
 import logoIgnite from '../../assets/logo-desafio-ignite.svg'
 import { NavLink } from "react-router-dom";
@@ -9,15 +9,15 @@ export function Header(){
   return (
     <HeaderContainer>
       <img src={logoIgnite} alt="" />
-      <div>
-        <button>
-          <MapPin size={22}/>
-          Porto Alegre, RS
-        </button>
+      <RightSide>
+        <div>
+          <MapPin size={22} weight="fill"/>
+          <p> Porto Alegre, RS </p>
+        </div>
         <NavLink to="/">
           <ShoppingCart size={22} weight="fill"/>
         </NavLink>
-      </div>
+      </RightSide>
     </HeaderContainer>
   )
 }
