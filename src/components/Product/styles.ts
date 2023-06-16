@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Background = styled.div`
+export const Background = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,24 +50,61 @@ export const Background = styled.div`
     font-size: 0.875rem;
     margin: 0.5rem 1.25rem;
   }
+`
 
-  .actions{
-    display: flex;
+export const Bottom = styled.section`
+  display: flex;
+  align-items: center;
 
-    .coin{
-      font-size: 0.875rem;
+  .coin{
+    font-size: 0.875rem;
 
-      .price{
-        font-family: 'Baloo 2', sans-serif;
-        font-size: 1.5rem;
-      }
+    .price{
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 1.5rem;
     }
+  }
+`
 
-    .input-section{
-      display: flex;
-      align-items: center;
+export const Actions = styled.section`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
-      margin-left: 1.4375rem;
-    }
+  margin-left: 1.4375rem;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 4px;
+
+  font-size: 1rem;
+
+  background-color: ${props => props.theme['gray-400']};
+
+  button{
+    background-color: ${props => props.theme['gray-400']};
+    color: ${props => props.theme['purple-500']};
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+`
+
+export const Cart = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  margin-left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: ${props => props.theme['white']};
+  background-color: ${props => props.theme['purple-800']};
+  border-radius: 4px;
+  border: none;
+
+  &:hover{
+    background-color: ${props => props.theme['purple-500']};
   }
 `

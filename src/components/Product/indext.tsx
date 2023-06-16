@@ -1,26 +1,36 @@
 import { ShoppingCart } from "phosphor-react";
 
-import expresso from '../../assets/images/Products/expresso.svg'
-import { Background } from "./styles";
+import { Actions, Background, Bottom, Cart } from "./styles";
 
-export function Product() {
+interface Product {
+  id?: number;
+  image?: string;
+  tag?: string;
+  title?: string;
+  description?: string;
+  price?: string;
+}
+
+export function Product({id, image, tag, title, description, price}: Product) {
   return (
-    <Background>
-      <img src={expresso} alt="" />
-      <p className="tag">Tradicional</p>
-      <p className="title">Expresso Tradicional</p>
-      <p className="description">O tradicional café feito com água quente e grãos moídos</p>
-      <div className="actions">
-        <p className="coin">R$ <span className="price">9,90</span></p>
-        <div className="input-section">
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
-        </div>
-        <button type="submit">
-          <ShoppingCart/>
-        </button>
-      </div>
+    <Background key={id}>
+      <img src={image} alt="" />
+      <p className="tag">{tag}</p>
+      <p className="title">{title}</p>
+      <p className="description">{description}</p>
+      <form action="">
+        <Bottom>
+            <p className="coin">R$ <span className="price">{price}</span></p>
+            <Actions>
+              <button>-</button>
+              <p>1</p>
+              <button>+</button>
+            </Actions>
+            <Cart>
+              <ShoppingCart weight="fill"/>
+            </Cart>
+        </Bottom>
+      </form>
     </Background>
   )
 }
