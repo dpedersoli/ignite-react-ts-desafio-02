@@ -9,7 +9,20 @@ export function ProductsList(){
       <h3>Nossos cafés</h3>
 
       <div className="products-list">
-        <Product/>
+      {ProductsData.map((product) => {
+        return (
+          <Product
+          key={product.id}
+          image={product.image}
+          title={product.title}
+          tag={product.tag[0]}
+          description={product.description}
+          price={product.price}
+          />
+        )
+      })
+      }
+        
       </div>
     </Products>
   )
