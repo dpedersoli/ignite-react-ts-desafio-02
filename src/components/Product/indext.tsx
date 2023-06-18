@@ -3,19 +3,19 @@ import { ShoppingCart } from "phosphor-react";
 import { Actions, Background, Bottom, Cart } from "./styles";
 
 interface Product {
-  id?: number;
-  image?: string;
-  tag?: string;
-  title?: string;
-  description?: string;
-  price?: string;
+  id: number;
+  image: string;
+  tag: string[];
+  title: string;
+  description: string;
+  price: string;
 }
 
 export function Product({id, image, tag, title, description, price}: Product) {
   return (
     <Background key={id}>
       <img src={image} alt="" />
-      <p className="tag">{tag}</p>
+      <div className="tags">{tag.map((data) => ( <p className="tag">{data}</p> ))}</div>
       <p className="title">{title}</p>
       <p className="description">{description}</p>
       <form action="">

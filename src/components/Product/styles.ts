@@ -19,23 +19,27 @@ export const Background = styled.section`
     margin-top: -1.2rem;
   }
 
-  .tag{
+  .tags{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.25rem;
 
-    background-color: ${props => props.theme['yellow-200']};
-    color: ${props => props.theme['yellow-800']};
+    .tag{
+      display: flex;
+      align-items: center;
 
-    text-transform: uppercase;
-    font-size: 0.625rem;
-    font-weight: 700;
+      background-color: ${props => props.theme['yellow-200']};
+      color: ${props => props.theme['yellow-800']};
 
-    width: 5.0625rem;
-    height: 1.3125rem;
-    border-radius: 8px;
+      text-transform: uppercase;
+      font-size: 0.625rem;
+      font-weight: 700;
 
-    margin-top: 0.75rem;
+      height: 1.3125rem;
+      border-radius: 8px;
+
+      margin-top: 0.75rem;
+      padding: 0 0.5rem;
+    }
   }
 
   .title{
