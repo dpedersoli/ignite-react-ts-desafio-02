@@ -76,8 +76,8 @@ export const Actions = styled.section`
   align-items: center;
 
   margin-left: 1.4375rem;
-  width: 3rem;
-  height: 1.5rem;
+  width: 3.3rem;
+  height: 1.8rem;
   border-radius: 4px;
 
   font-size: 1rem;
