@@ -5,7 +5,7 @@ export const Main = styled.section`
   justify-content: space-between;
 
   margin-top: 5.75rem;
-  height: 34rem;
+  height: 30rem;
 
   img{
     width: 29.75rem;

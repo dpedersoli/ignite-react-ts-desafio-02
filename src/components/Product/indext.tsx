@@ -2,7 +2,7 @@ import { ShoppingCart } from "phosphor-react";
 
 import { Actions, Background, Bottom, Cart } from "./styles";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 interface Product {
   id: number;
@@ -16,7 +16,7 @@ interface Product {
 export function Product({id, image, tag, title, description, price}: Product) {
   const [numberOfItems, setNumberOfItems] = useState(1);
 
-  const { register, handleSubmit, watch } = useForm();
+  // const { register, handleSubmit, watch } = useForm();
   
   function addOne(e: any){
     e.preventDefault();
@@ -47,12 +47,12 @@ export function Product({id, image, tag, title, description, price}: Product) {
       <div className="tags">{tag.map((data) => ( <p className="tag">{data}</p> ))}</div>
       <p className="title">{title}</p>
       <p className="description">{description}</p>
-      <form onSubmit={handleSubmit(handleAddItemsToShoppingCart)}>
+      <form > {/* onSubmit={handleSubmit(handleAddItemsToShoppingCart)} */}
         <Bottom>
             <p className="coin">R$ <span className="price">{price}</span></p>
             <Actions>
               <button onClick={deleteOne}>-</button>
-              <p {...register('quantity')}>
+              <p > {/*  {...register('quantity')} */}
                 {numberOfItems}
               </p>
               <button onClick={addOne}>+</button>
